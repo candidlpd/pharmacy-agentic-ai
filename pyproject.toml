@@ -1,0 +1,24 @@
+[project]
+name = "eli-lilly-agentic-ai"
+version = "1.0.0"
+description = "Enterprise Multi-Agent System for Pharmacy Operations"
+authors = [{name = "Eli Lilly AI Team"}]
+license = {text = "Proprietary"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "langgraph>=0.0.40",
+    "langchain>=0.1.0",
+    "streamlit>=1.28.0",
+    "fastapi>=0.104.0",
+    "faiss-cpu>=1.7.4",
+    "sentence-transformers>=2.2.2",
+]
+
+[project.scripts]
+run = "streamlit run app/main_streamlit.py"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

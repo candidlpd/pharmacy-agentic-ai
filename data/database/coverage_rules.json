@@ -1,0 +1,52 @@
+{
+  "insurance_plans": [
+    {
+      "plan_id": "BCBS001",
+      "name": "Blue Cross Blue Shield Premier",
+      "formulary_year": 2025,
+      "tiers": {
+        "1": {"copay": "$10", "description": "Preferred Generic"},
+        "2": {"copay": "$25", "description": "Preferred Brand"},
+        "3": {"copay": "$60", "description": "Non-Preferred Brand"},
+        "4": {"copay": "$100", "description": "Specialty"}
+      },
+      "prior_auth_required": ["Trulicity", "Mounjaro", "Ozempic", "Taltz", "Olumiant"],
+      "step_therapy_required": ["Trulicity", "Mounjaro"],
+      "step_therapy_drugs": ["Metformin", "Glipizide"]
+    },
+    {
+      "plan_id": "UHC002",
+      "name": "United Healthcare Choice",
+      "formulary_year": 2025,
+      "tiers": {
+        "1": {"copay": "$15", "description": "Generic"},
+        "2": {"copay": "$45", "description": "Preferred Brand"},
+        "3": {"copay": "$75", "description": "Non-Preferred"},
+        "4": {"copay": "$125", "description": "Specialty"}
+      },
+      "prior_auth_required": ["Trulicity", "Mounjaro", "Taltz"],
+      "step_therapy_required": ["Trulicity"],
+      "step_therapy_drugs": ["Metformin"]
+    }
+  ],
+  "prior_auth_criteria": {
+    "Trulicity": [
+      "Diagnosis of Type 2 Diabetes Mellitus",
+      "Age 18 years or older",
+      "A1c ≥ 7% on current therapy",
+      "Trial of metformin for at least 90 days (unless contraindicated)",
+      "Not currently using another GLP-1 agonist"
+    ],
+    "Mounjaro": [
+      "Diagnosis of Type 2 Diabetes Mellitus",
+      "A1c ≥ 7% despite metformin therapy",
+      "BMI ≥ 25 kg/m²",
+      "Not currently using GLP-1 agonist"
+    ],
+    "Taltz": [
+      "Diagnosis of moderate-to-severe plaque psoriasis",
+      "Candidate for systemic therapy",
+      "BSA ≥ 10% or PASI ≥ 12"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Large files (PDFs over 10MB)
+*.pdf
+*.zip
+*.tar.gz
+
+# Generated files
+vector_store/
+artifacts/
+logs/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS files
+Thumbs.db
+Desktop.ini

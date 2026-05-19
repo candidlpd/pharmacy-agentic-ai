@@ -1,0 +1,108 @@
+{
+  "test_cases": [
+    {
+      "case_id": "TEST001",
+      "description": "Standard Trulicity approval",
+      "patient": {
+        "name": "John Smith",
+        "age": 52,
+        "allergies": [],
+        "conditions": ["Type 2 Diabetes"]
+      },
+      "order": {
+        "drug": "Trulicity",
+        "dose": "0.75 mg",
+        "frequency": "once weekly",
+        "indication": "Type 2 Diabetes"
+      },
+      "expected": {
+        "approved": true,
+        "risk_score": 0.2,
+        "pa_required": true
+      }
+    },
+    {
+      "case_id": "TEST002",
+      "description": "High dose - should be reviewed",
+      "patient": {
+        "name": "Jane Doe",
+        "age": 45,
+        "allergies": [],
+        "conditions": ["Type 2 Diabetes"]
+      },
+      "order": {
+        "drug": "Trulicity",
+        "dose": "5.0 mg",
+        "frequency": "once weekly",
+        "indication": "Type 2 Diabetes"
+      },
+      "expected": {
+        "approved": false,
+        "reason_contains": "exceeds maximum"
+      }
+    },
+    {
+      "case_id": "TEST003",
+      "description": "Contraindication - MTC",
+      "patient": {
+        "name": "Bob Wilson",
+        "age": 60,
+        "allergies": [],
+        "conditions": ["Type 2 Diabetes", "MTC"],
+        "medical_history": "Medullary Thyroid Carcinoma"
+      },
+      "order": {
+        "drug": "Trulicity",
+        "dose": "0.75 mg",
+        "frequency": "once weekly",
+        "indication": "Type 2 Diabetes"
+      },
+      "expected": {
+        "approved": false,
+        "reason_contains": "contraindication"
+      }
+    },
+    {
+      "case_id": "TEST004",
+      "description": "Humalog - no PA required",
+      "patient": {
+        "name": "Sarah Johnson",
+        "age": 35,
+        "allergies": [],
+        "conditions": ["Type 1 Diabetes"]
+      },
+      "order": {
+        "drug": "Humalog",
+        "dose": "10 units",
+        "frequency": "with meals",
+        "indication": "Type 1 Diabetes"
+      },
+      "expected": {
+        "approved": true,
+        "pa_required": false,
+        "tier": 1
+      }
+    },
+    {
+      "case_id": "TEST005",
+      "description": "Taltz - specialty drug",
+      "patient": {
+        "name": "Michael Brown",
+        "age": 48,
+        "allergies": [],
+        "conditions": ["Plaque Psoriasis", "BSA 15%"]
+      },
+      "order": {
+        "drug": "Taltz",
+        "dose": "160 mg",
+        "frequency": "loading dose then 80 mg q4w",
+        "indication": "Plaque Psoriasis"
+      },
+      "expected": {
+        "approved": true,
+        "pa_required": true,
+        "tier": 3
+      }
+    }
+  ]
+}

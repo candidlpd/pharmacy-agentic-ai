@@ -1,0 +1,33 @@
+{
+  "drug_interactions": [
+    {
+      "drug": "Trulicity",
+      "interactions": [
+        {"with": "Insulin", "severity": "High", "recommendation": "Monitor blood glucose, adjust insulin dose"},
+        {"with": "Sulfonylureas", "severity": "High", "recommendation": "May require lower sulfonylurea dose"},
+        {"with": "Warfarin", "severity": "Moderate", "recommendation": "Monitor INR frequently"},
+        {"with": "Oral contraceptives", "severity": "Moderate", "recommendation": "Give 1 hour before Trulicity"}
+      ]
+    },
+    {
+      "drug": "Mounjaro",
+      "interactions": [
+        {"with": "Insulin", "severity": "High", "recommendation": "Monitor blood glucose"},
+        {"with": "Sulfonylureas", "severity": "High", "recommendation": "Reduce sulfonylurea dose"},
+        {"with": "Oral medications", "severity": "Moderate", "recommendation": "Take at least 1 hour before"}
+      ]
+    }
+  ],
+  "contraindications": [
+    {"drug": "Trulicity", "condition": "MTC", "description": "Personal or family history"},
+    {"drug": "Trulicity", "condition": "MEN2", "description": "Multiple Endocrine Neoplasia type 2"},
+    {"drug": "Mounjaro", "condition": "MTC", "description": "Personal or family history"},
+    {"drug": "Taltz", "condition": "Hypersensitivity", "description": "Serious hypersensitivity reactions"}
+  ],
+  "dose_limits": {
+    "Trulicity": {"max_weekly_mg": 4.5, "max_single_mg": 4.5},
+    "Mounjaro": {"max_weekly_mg": 15, "max_single_mg": 15},
+    "Humalog": {"max_daily_units": 200, "unit_per_kg": 1},
+    "Taltz": {"max_loading_mg": 160, "max_maintenance_mg": 80}
+  }
+}

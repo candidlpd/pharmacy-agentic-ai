@@ -1,0 +1,115 @@
+{
+  "drugs": [
+    {
+      "id": "DRG001",
+      "name": "Trulicity",
+      "generic_name": "dulaglutide",
+      "manufacturer": "Eli Lilly and Company",
+      "ndc": "0002-1432-01",
+      "strengths": ["0.75 mg/0.5mL", "1.5 mg/0.5mL", "3.0 mg/0.5mL", "4.5 mg/0.5mL"],
+      "indications": ["Type 2 Diabetes Mellitus"],
+      "dosing": {
+        "starting": "0.75 mg once weekly",
+        "maintenance": "1.5 mg once weekly",
+        "maximum": "4.5 mg once weekly"
+      },
+      "contraindications": ["MTC", "MEN2", "Hypersensitivity"],
+      "warnings": ["Pancreatitis", "Hypoglycemia", "Acute Kidney Injury", "Hypersensitivity"],
+      "common_side_effects": ["Nausea (21%)", "Diarrhea (13%)", "Vomiting (9%)", "Abdominal pain (7%)"],
+      "serious_side_effects": ["Pancreatitis", "Thyroid C-cell tumors", "Severe Hypoglycemia"],
+      "pregnancy_category": "N",
+      "renal_adjustment": "No adjustment for mild-moderate",
+      "hepatic_adjustment": "No adjustment",
+      "storage": "Refrigerate 36°F-46°F",
+      "formulary_tier": 2,
+      "pa_required": true,
+      "step_therapy": true,
+      "copay": "$60",
+      "wac_price": "$850.00"
+    },
+    {
+      "id": "DRG002",
+      "name": "Mounjaro",
+      "generic_name": "tirzepatide",
+      "manufacturer": "Eli Lilly and Company",
+      "ndc": "0002-1433-01",
+      "strengths": ["2.5 mg/0.5mL", "5 mg/0.5mL", "7.5 mg/0.5mL", "10 mg/0.5mL", "12.5 mg/0.5mL", "15 mg/0.5mL"],
+      "indications": ["Type 2 Diabetes Mellitus"],
+      "dosing": {
+        "starting": "2.5 mg once weekly",
+        "maintenance": "5 mg, 10 mg, or 15 mg once weekly",
+        "maximum": "15 mg once weekly"
+      },
+      "contraindications": ["MTC", "MEN2", "Hypersensitivity"],
+      "warnings": ["Severe GI adverse reactions", "Diabetic retinopathy", "Acute Kidney Injury"],
+      "common_side_effects": ["Nausea (18%)", "Diarrhea (12%)", "Vomiting (8%)", "Decreased appetite (7%)"],
+      "formulary_tier": 2,
+      "pa_required": true,
+      "step_therapy": true,
+      "copay": "$60",
+      "wac_price": "$1025.00"
+    },
+    {
+      "id": "DRG003",
+      "name": "Humalog",
+      "generic_name": "insulin lispro",
+      "manufacturer": "Eli Lilly and Company",
+      "ndc": "0002-7510-01",
+      "strengths": ["100 units/mL", "200 units/mL"],
+      "indications": ["Type 1 Diabetes", "Type 2 Diabetes"],
+      "dosing": {
+        "starting": "0.5-1 unit/kg/day divided",
+        "maximum": "Individualized"
+      },
+      "contraindications": ["Hypoglycemia", "Hypersensitivity"],
+      "warnings": ["Hypoglycemia", "Hypokalemia", "Medication errors"],
+      "common_side_effects": ["Hypoglycemia", "Injection site reactions", "Weight gain"],
+      "formulary_tier": 1,
+      "pa_required": false,
+      "step_therapy": false,
+      "copay": "$25",
+      "wac_price": "$350.00"
+    },
+    {
+      "id": "DRG004",
+      "name": "Taltz",
+      "generic_name": "ixekizumab",
+      "manufacturer": "Eli Lilly and Company",
+      "ndc": "0002-1445-01",
+      "strengths": ["80 mg/mL"],
+      "indications": ["Plaque Psoriasis", "Psoriatic Arthritis", "Ankylosing Spondylitis"],
+      "dosing": {
+        "starting": "160 mg (two 80mg injections)",
+        "maintenance": "80 mg every 4 weeks",
+        "maximum": "160 mg loading then 80 mg q4w"
+      },
+      "contraindications": ["Hypersensitivity"],
+      "warnings": ["Infections", "Hypersensitivity reactions", "IBD"],
+      "formulary_tier": 3,
+      "pa_required": true,
+      "step_therapy": true,
+      "copay": "$100",
+      "wac_price": "$5200.00"
+    },
+    {
+      "id": "DRG005",
+      "name": "Olumiant",
+      "generic_name": "baricitinib",
+      "manufacturer": "Eli Lilly and Company",
+      "ndc": "0002-6885-30",
+      "strengths": ["2 mg", "4 mg"],
+      "indications": ["Rheumatoid Arthritis", "COVID-19 (EUA)"],
+      "dosing": {
+        "starting": "2 mg once daily",
+        "maximum": "4 mg once daily"
+      },
+      "contraindications": ["Hypersensitivity"],
+      "warnings": ["Serious infections", "Thrombosis", "GI perforation", "Malignancy"],
+      "formulary_tier": 2,
+      "pa_required": true,
+      "step_therapy": true,
+      "copay": "$75",
+      "wac_price": "$2500.00"
+    }
+  ]
+}

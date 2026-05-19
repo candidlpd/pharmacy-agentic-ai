@@ -1,0 +1,35 @@
+
+---
+
+## 📄 FILE 4: `docker-compose.yml`
+
+**Location:** `eli_lilly_production_agentic_ai/docker-compose.yml`
+
+```yaml
+version: '3.9'
+
+services:
+  pharmacy-ai:
+    build: .
+    ports:
+      - "8501:8501"  # Streamlit
+      - "8000:8000"  # FastAPI
+    volumes:
+      - ./data:/app/data
+      - ./vector_store:/app/vector_store
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+    restart: unless-stopped
+
+  # Optional: Ollama for local LLM
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
